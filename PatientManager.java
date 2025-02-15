@@ -27,6 +27,10 @@ public class PatientManager {
     public int caffeineAbsorption(){
         for (int i=0; i < pList.size(); i++){
             if (pList.get(i) != null){
+
+                //pList.caffeineLvl;
+                // figure out how to get and change caffeine level 
+                //
             }
         }    
         return 0;
@@ -36,8 +40,15 @@ public class PatientManager {
     public String toString(){
         if (pList != null){
             String finalStr;
+            for (int i=0; i < pList.size(); i++){
+                if (pList.get(i) != null){
+    
+                    // again
+                    // figure out how to get caffeine level and ID number
 
-
+                    // finalStr += patientIdvar + " " + patientCaffieneVar + "\n";
+                }
+            } 
             return finalStr;
         } else {
             return "Empty"; 
