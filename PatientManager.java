@@ -23,4 +23,25 @@ public class PatientManager {
         pList.set(indexNum, null);
         return pRemoved;
     }
+
+    public int caffeineAbsorption(){
+        for (int i=0; i < pList.size(); i++){
+            if (pList.get(i) != null){
+            }
+        }    
+        return 0;
+    }
+
+    @Override
+    public String toString(){
+        if (pList != null){
+            String finalStr;
+
+
+            return finalStr;
+        } else {
+            return "Empty"; 
+        }
+    }
+
 }
