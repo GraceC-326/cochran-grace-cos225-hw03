@@ -5,10 +5,10 @@ public class PatientTester {
         PatientManager doctor = new PatientManager();
         System.out.println(doctor);
 
-        doctor.pList.add(new Patient(1, 200));
-        doctor.pList.add(new Patient(2, 400));
-        doctor.pList.add(new Patient(3, 600));
-        doctor.pList.add(new Patient(4, 800));
+        doctor.admitPatient(new Patient(1, 200));
+        doctor.admitPatient(new Patient(2, 400));
+        doctor.admitPatient(new Patient(3, 600));
+        doctor.admitPatient(new Patient(4, 800));
         System.out.println(doctor);
 
         doctor.caffeineAbsorption();
