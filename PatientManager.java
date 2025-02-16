@@ -4,7 +4,7 @@ public class PatientManager {
     ArrayList<Patient> pList;
 
     public PatientManager(){
-        pList = new ArrayList<Patient>(10);
+        pList = new ArrayList<>(10);
     }
 
     public int admitPatient(Patient beingAdmitted){
@@ -27,10 +27,11 @@ public class PatientManager {
     public int caffeineAbsorption(){
         for (int i=0; i < pList.size(); i++){
             if (pList.get(i) != null){
-
-                //pList.caffeineLvl;
-                // figure out how to get and change caffeine level 
-                //
+                Patient patientGot = pList.get(i);
+                patientGot.caffeineLvl -= 160;
+                if (patientGot.caffeineLvl <= 0){
+                    removePatient(i);
+                }
             }
         }    
         return 0;
@@ -39,20 +40,19 @@ public class PatientManager {
     @Override
     public String toString(){
         if (pList != null){
-            String finalStr;
+            String finalStr = null;
             for (int i=0; i < pList.size(); i++){
                 if (pList.get(i) != null){
-    
-                    // again
-                    // figure out how to get caffeine level and ID number
+                    Patient patientGotten = pList.get(i);
+                    double caffeineTxt = patientGotten.caffeineLvl;
+                    int idTxt = patientGotten.idNum;
 
-                    // finalStr += patientIdvar + " " + patientCaffieneVar + "\n";
+                    finalStr += idTxt + " " + caffeineTxt + "\n";
                 }
             } 
             return finalStr;
-        } else {
+        } 
             return "Empty"; 
-        }
     }
 
 }
