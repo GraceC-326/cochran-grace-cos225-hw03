@@ -1,10 +1,14 @@
+import java.text.ParseException;
 import java.util.ArrayList;
 public class PatientManager {
     
     ArrayList<Patient> pList;
 
     public PatientManager(){
-        pList = new ArrayList<>(10);
+        pList = new ArrayList<>();
+        for (int i=0; i < 10; i++){
+            pList.add(null);
+        }
     }
 
     public int admitPatient(Patient beingAdmitted){
@@ -39,20 +43,21 @@ public class PatientManager {
 
     @Override
     public String toString(){
-        if (pList != null){
-            String finalStr = null;
+        
+            String finalStr = "";
             for (int i=0; i < pList.size(); i++){
                 if (pList.get(i) != null){
                     Patient patientGotten = pList.get(i);
-                    double caffeineTxt = patientGotten.caffeineLvl;
+                    int caffeineTxt = (int)patientGotten.caffeineLvl;
                     int idTxt = patientGotten.idNum;
 
                     finalStr += idTxt + " " + caffeineTxt + "\n";
                 }
             } 
-            return finalStr;
-        } 
-            return "Empty"; 
+            if("".equals(finalStr)){
+            return "Empty\n";
+            }
+            return finalStr; 
     }
 
 }

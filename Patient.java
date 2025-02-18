@@ -1,10 +1,10 @@
 public class Patient {
-    int idNum;
-    double caffeineLvl;
+    public int idNum;
+    public double caffeineLvl;
 
     public Patient(int idNumber, double caffeineLevel){
-        idNumber = idNum;
-        caffeineLevel = caffeineLvl;
+        idNum = idNumber;
+        caffeineLvl = caffeineLevel;
     }
 
 }
