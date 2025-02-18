@@ -1,3 +1,8 @@
+/*
+ Grace Cochran
+ COS 225: Homework 3
+ */
+
 public class PatientTester {
 
     public static void main(String[] args){
